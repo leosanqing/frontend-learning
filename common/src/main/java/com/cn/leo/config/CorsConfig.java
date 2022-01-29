@@ -1,6 +1,6 @@
-package com.cn.leo.login.config;
+package com.cn.leo.config;
 
-import com.cn.leo.common.interceptor.RequestParamInterceptor;
+import com.cn.leo.interceptor.RequestParamInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

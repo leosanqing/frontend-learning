@@ -1,3 +1,4 @@
 # Project exclude paths
 /common/target/
 /login/target/
+.idea/

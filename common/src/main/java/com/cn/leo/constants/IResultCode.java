@@ -1,4 +1,4 @@
-package com.cn.leo.common.constants;
+package com.cn.leo.constants;
 
 import lombok.Builder;
 import lombok.Data;

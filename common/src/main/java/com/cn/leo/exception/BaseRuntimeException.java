@@ -1,7 +1,7 @@
-package com.cn.leo.common.exception;
+package com.cn.leo.exception;
 
 
-import com.cn.leo.common.constants.IResultCode;
+import com.cn.leo.constants.IResultCode;
 import lombok.Getter;
 
 @Getter

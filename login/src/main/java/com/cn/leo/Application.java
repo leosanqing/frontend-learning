@@ -1,4 +1,4 @@
-package com.cn.leo.login;
+package com.cn.leo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,6 +1,4 @@
-package com.cn.leo.login.constants;
-
-import com.cn.leo.common.constants.IResultCode;
+package com.cn.leo.constants;
 
 public enum ResultCode implements IResultCode {
     CAPTCHA_INVALID(100000,"验证码不正确，请重新输入"),

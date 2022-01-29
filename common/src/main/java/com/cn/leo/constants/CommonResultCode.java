@@ -1,4 +1,4 @@
-package com.cn.leo.common.constants;
+package com.cn.leo.constants;
 
 public enum CommonResultCode implements IResultCode {
     SYSTEM_LOGIC_ERROR(9001, "系统错误"),

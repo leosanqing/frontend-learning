@@ -1,3 +1,9 @@
 
-j
-:common/src/main/java/com/cn/leo/common/advice/ResBody.java,f/3/f3c3d6bd5abe23efe1200cf45abccf6b4bc63f6b
+>
+common/pom.xml,4/8/488bdbea7e8b73c44bd2a54e63f6012f10969196
+=
+lombok.config,8/2/823fe80d2650ec87c2614800da17ca3a55af96a9
+7
+pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+=
+login/pom.xml,1/8/18cc8602061f1ce7e4250e0ea72d72206fb43582

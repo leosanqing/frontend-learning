@@ -1,4 +1,4 @@
-package com.cn.leo.common.interceptor;
+package com.cn.leo.interceptor;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;

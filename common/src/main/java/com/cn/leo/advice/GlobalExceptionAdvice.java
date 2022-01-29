@@ -1,8 +1,8 @@
-package com.cn.leo.common.advice;
+package com.cn.leo.advice;
 
-import com.cn.leo.common.constants.CommonResultCode;
-import com.cn.leo.common.constants.IResultCode;
-import com.cn.leo.common.exception.BaseRuntimeException;
+import com.cn.leo.constants.CommonResultCode;
+import com.cn.leo.constants.IResultCode;
+import com.cn.leo.exception.BaseRuntimeException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -28,9 +28,7 @@ public class GlobalExceptionAdvice {
         StringBuilder stringBuilder = new StringBuilder();
         List<FieldError> fieldErrors = e.getBindingResult().getFieldErrors();
         fieldErrors.forEach(
-                fieldError -> {
-                    stringBuilder.append(fieldError.getField() + ":" + fieldError.getDefaultMessage() + System.lineSeparator());
-                }
+                fieldError -> stringBuilder.append(fieldError.getField() + ":" + fieldError.getDefaultMessage() + System.lineSeparator())
         );
 
         return IResultCode.DynamicResultCode
@@ -47,16 +45,16 @@ public class GlobalExceptionAdvice {
 
         List<FieldError> fieldErrors = e.getBindingResult().getFieldErrors();
         fieldErrors.forEach(
-                fieldError -> {
-                    stringBuilder.append(fieldError.getField() + ":" + fieldError.getDefaultMessage() + System.lineSeparator());
-                }
+                fieldError -> stringBuilder.append(fieldError.getField())
+                        .append(":")
+                        .append(fieldError.getDefaultMessage())
+                        .append(System.lineSeparator())
         );
 
         List<ObjectError> globalErrors = e.getBindingResult().getGlobalErrors();
         globalErrors.forEach(
-                objectError -> {
-                    stringBuilder.append(objectError.getDefaultMessage() + System.lineSeparator());
-                }
+                objectError -> stringBuilder.append(objectError.getDefaultMessage())
+                        .append(System.lineSeparator())
         );
 
         return IResultCode.DynamicResultCode
@@ -65,26 +63,6 @@ public class GlobalExceptionAdvice {
                 .errorMessage(stringBuilder.toString())
                 .build();
     }
-
-//    @ExceptionHandler(value = ConstraintViolationException.class)
-//    public IResultCode handle(ConstraintViolationException e) {
-//        log.error("Check ConstraintViolationException  ==>", e);
-//        StringBuilder stringBuilder = new StringBuilder();
-//
-//        Set<ConstraintViolation<?>> constraintViolations = e.getConstraintViolations();
-//        constraintViolations.forEach(
-//                constraintViolation -> {
-//                    stringBuilder.append(
-//                            constraintViolation.getInvalidValue() + ":" + constraintViolation.getMessage() + System.lineSeparator()
-//                    );
-//                }
-//        );
-//        return IResultCode.DynamicResultCode
-//                .builder()
-//                .errorCode(HttpStatus.BAD_REQUEST.value())
-//                .errorMessage(stringBuilder.toString())
-//                .build();
-//    }
 
     @ExceptionHandler(value = JsonProcessingException.class)
     public IResultCode handle(JsonProcessingException e) {

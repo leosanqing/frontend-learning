@@ -1,7 +1,7 @@
-package com.cn.leo.common.advice;
+package com.cn.leo.advice;
 
 
-import com.cn.leo.common.constants.IResultCode;
+import com.cn.leo.constants.IResultCode;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
 import org.springframework.http.server.ServerHttpRequest;
@@ -9,7 +9,7 @@ import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
-@RestControllerAdvice(basePackages = {"com.cn.leo"})
+@RestControllerAdvice(basePackages = {"com.cn"})
 public class GlobalResponseBodyAdvice implements ResponseBodyAdvice {
 
     @Override

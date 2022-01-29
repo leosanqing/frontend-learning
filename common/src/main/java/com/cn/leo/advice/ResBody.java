@@ -1,6 +1,6 @@
-package com.cn.leo.common.advice;
+package com.cn.leo.advice;
 
-import com.cn.leo.common.constants.IResultCode;
+import com.cn.leo.constants.IResultCode;
 
 /**
  * @description: ResBody
